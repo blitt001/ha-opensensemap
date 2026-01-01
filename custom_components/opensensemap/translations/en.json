@@ -1,0 +1,109 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "OpenSenseMap Configuration",
+        "description": "Enter your SenseBox ID from opensensemap.org. The access token is optional but required for some boxes.",
+        "data": {
+          "box_id": "SenseBox ID",
+          "access_token": "Access Token (optional)"
+        }
+      },
+      "sensors": {
+        "title": "Sensor Mapping",
+        "description": "Map your Home Assistant sensors to OpenSenseMap sensor IDs. For each measurement, select your Home Assistant entity and enter the corresponding OpenSenseMap sensor ID.",
+        "data": {
+          "entity_pm25": "[PM2.5] Home Assistant Entity",
+          "sensor_id_pm25": "[PM2.5] OpenSenseMap Sensor ID",
+          "entity_pm10": "[PM10] Home Assistant Entity",
+          "sensor_id_pm10": "[PM10] OpenSenseMap Sensor ID",
+          "entity_temperature": "[Temperature] Home Assistant Entity",
+          "sensor_id_temperature": "[Temperature] OpenSenseMap Sensor ID",
+          "entity_humidity": "[Humidity] Home Assistant Entity",
+          "sensor_id_humidity": "[Humidity] OpenSenseMap Sensor ID",
+          "entity_pressure": "[Pressure] Home Assistant Entity",
+          "sensor_id_pressure": "[Pressure] OpenSenseMap Sensor ID"
+        },
+        "data_description": {
+          "entity_pm25": "Select your PM2.5 sensor entity",
+          "sensor_id_pm25": "24-character hex ID from opensensemap.org",
+          "entity_pm10": "Select your PM10 sensor entity",
+          "sensor_id_pm10": "24-character hex ID from opensensemap.org",
+          "entity_temperature": "Select your temperature sensor entity",
+          "sensor_id_temperature": "24-character hex ID from opensensemap.org",
+          "entity_humidity": "Select your humidity sensor entity",
+          "sensor_id_humidity": "24-character hex ID from opensensemap.org",
+          "entity_pressure": "Select your pressure sensor entity",
+          "sensor_id_pressure": "24-character hex ID (pressure will be converted to Pa)"
+        }
+      },
+      "options": {
+        "title": "Options",
+        "description": "Configure upload settings.",
+        "data": {
+          "update_interval": "Update Interval (seconds)",
+          "debug_mode": "Enable Debug Mode"
+        }
+      }
+    },
+    "error": {
+      "invalid_box_id": "Invalid SenseBox ID format. It should be a 24-character hex string.",
+      "invalid_sensor_id": "Invalid sensor ID format. Sensor IDs should be 24-character hex strings.",
+      "no_sensor_configured": "Please configure at least one sensor mapping.",
+      "incomplete_sensor_pair": "Each sensor needs both an ID and an entity. Please complete or remove partial mappings."
+    },
+    "abort": {
+      "already_configured": "This SenseBox is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "OpenSenseMap Options",
+        "description": "Update your sensor mappings and settings.",
+        "data": {
+          "entity_pm25": "[PM2.5] Home Assistant Entity",
+          "sensor_id_pm25": "[PM2.5] OpenSenseMap Sensor ID",
+          "entity_pm10": "[PM10] Home Assistant Entity",
+          "sensor_id_pm10": "[PM10] OpenSenseMap Sensor ID",
+          "entity_temperature": "[Temperature] Home Assistant Entity",
+          "sensor_id_temperature": "[Temperature] OpenSenseMap Sensor ID",
+          "entity_humidity": "[Humidity] Home Assistant Entity",
+          "sensor_id_humidity": "[Humidity] OpenSenseMap Sensor ID",
+          "entity_pressure": "[Pressure] Home Assistant Entity",
+          "sensor_id_pressure": "[Pressure] OpenSenseMap Sensor ID",
+          "update_interval": "Update Interval (seconds)",
+          "debug_mode": "Enable Debug Mode"
+        },
+        "data_description": {
+          "entity_pm25": "Select your PM2.5 sensor entity",
+          "sensor_id_pm25": "24-character hex ID from opensensemap.org",
+          "entity_pm10": "Select your PM10 sensor entity",
+          "sensor_id_pm10": "24-character hex ID from opensensemap.org",
+          "entity_temperature": "Select your temperature sensor entity",
+          "sensor_id_temperature": "24-character hex ID from opensensemap.org",
+          "entity_humidity": "Select your humidity sensor entity",
+          "sensor_id_humidity": "24-character hex ID from opensensemap.org",
+          "entity_pressure": "Select your pressure sensor entity",
+          "sensor_id_pressure": "24-character hex ID (pressure will be converted to Pa)"
+        }
+      }
+    },
+    "error": {
+      "invalid_sensor_id": "Invalid sensor ID format. Sensor IDs should be 24-character hex strings.",
+      "no_sensor_configured": "Please configure at least one sensor mapping."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "pending": "Pending",
+          "ok": "OK",
+          "error": "Error"
+        }
+      }
+    }
+  }
+}
