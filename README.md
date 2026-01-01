@@ -1,7 +1,8 @@
 # OpenSenseMap Uploader for Home Assistant
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![GitHub Release](https://img.shields.io/github/v/release/blitt001/ha-opensensemap)](https://github.com/blitt001/ha-opensensemap/releases)
+[![GitHub Downloads](https://img.shields.io/github/downloads/blitt001/ha-opensensemap/total)](https://github.com/blitt001/ha-opensensemap/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Upload** your weather station and air quality data from Home Assistant to [OpenSenseMap](https://opensensemap.org/).
@@ -34,6 +35,10 @@ This integration allows you to contribute measurements from your personal weathe
 
 ### HACS (Recommended)
 
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=blitt001&repository=ha-opensensemap&category=integration)
+
+Click the button above, or follow these steps:
+
 1. Open HACS in Home Assistant
 2. Go to **Integrations**
 3. Click the three dots menu and select **Custom repositories**
@@ -49,6 +54,10 @@ This integration allows you to contribute measurements from your personal weathe
 3. Restart Home Assistant
 
 ## Configuration
+
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=opensensemap)
+
+Click the button above, or follow these steps:
 
 1. Go to **Settings** > **Devices & Services**
 2. Click **Add Integration**
